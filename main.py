@@ -1,9 +1,12 @@
 
 def encode(thing):
-    thing_string = int(thing)
-    for i in thing_string:
-        i += 3
-    return thing_string
+    encoded = ''
+    for i in range(0, len(thing)):
+        digit = int(thing[1]) +3
+        if digit > 9:
+            digit = digit % 10
+        encoded += str(digit)
+    return thing
 
 
 
