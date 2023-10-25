@@ -9,6 +9,15 @@ def encode(thing):
     return thing
 
 
+def decode(password):
+    decoded = ''
+    for i in range(0, len(password)):
+        digit = int(password[i]) - 3
+        if digit < 0:
+            digit = digit + 10
+        decoded += str(digit)
+    return decoded
+
 
 def main():
     encoded = True
